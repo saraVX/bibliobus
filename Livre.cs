@@ -31,14 +31,14 @@ namespace BiblioBus
             this.genre = genre ?? "Non spécifié";
         }
 
-        // Accesseurs en lecture (Exercice 3)
+        
         public string Titre => titre;
         public string Auteur => auteur;
         public string Editeur => editeur;
         public int NbExemplaires => nbExemplaires;
         public string Genre => genre;
 
-        // Méthodes pour les exemplaires (Exercice 4)
+        
         public void NouvelleExemplaire()
         {
             nbExemplaires++;
@@ -60,7 +60,7 @@ namespace BiblioBus
                 throw new InvalidOperationException("Impossible de perdre un exemplaire : aucun exemplaire disponible");
         }
 
-        // Méthode toString() (Exercice 5)
+        
         public override string ToString()
         {
             return $"Titre: {titre}\n" +
@@ -70,13 +70,13 @@ namespace BiblioBus
                    $"Exemplaires disponibles: {nbExemplaires}";
         }
 
-        // Méthode estPresent() (Exercice 6)
+        
         public bool EstPresent()
         {
             return nbExemplaires > 0;
         }
 
-        // Méthode equals() (Exercice 7)
+        
         public bool Equals(Livre autre)
         {
             if (autre == null) return false;
@@ -86,7 +86,7 @@ namespace BiblioBus
                    editeur == autre.editeur;
         }
 
-        // Méthode pour changement d'éditeur (Exercice 8)
+        
         public Livre NouvelleEditeur(string nouvelEditeur)
         {
             if (string.IsNullOrWhiteSpace(nouvelEditeur))
